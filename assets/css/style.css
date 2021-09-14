@@ -1,6 +1,7 @@
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
+    height: 10px;
 }
 
 /* Track */
@@ -23,7 +24,16 @@
   	padding : 0;
   	font-family: 'Poppins', sans-serif;
 }
-
+@keyframes skill {
+  	from {
+  		height: 0px;
+    	bottom: 0px;
+	}
+  	to {
+  		height: 100px;
+    	bottom: 100px;
+  	}
+}
 html, body {
   	background-color: #1d2934;
   	overflow-x: hidden;
@@ -186,6 +196,8 @@ main .keahlian .skill-name .skill-rate span.rate2{
     position: relative;
     height: 100px;
     bottom: 100px;
+    animation-name: skill;
+  	animation-duration: 4s;
 }
 main .keahlian .skill-name .skill-rate span.rate3{
 	background-color: #9c59b6;
@@ -430,12 +442,12 @@ main #contact-cont .socmed{
 	}
 	nav ul{
 		position: absolute;
-		height: 100vh;
+		height: 50vh;
 		width: 100vw;
 		align-items: center;
 		justify-content: space-evenly;
 		flex-direction: column; 
-		background-color: white;
+		background-color: #1d2934;
 		z-index: -1;
 		transform: translateY(-60%);
 		transition: all 0.5s;
@@ -462,6 +474,11 @@ main #contact-cont .socmed{
 	}
 	main .home .profile-img img{
 		display: none;
+	}
+
+	main .keahlian{
+	    height: calc(100vh - 64px);
+	    overflow-x: scroll;
 	}
 
 	main .prestasi{
