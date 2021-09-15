@@ -490,8 +490,9 @@ main .prestasi{
 }
 main .prestasi img{
 	width: 150px;
-	height: 150px;
-
+    height: 150px;
+    margin: 50% auto;
+    display: block;
 }
 main .prestasi .presshow{
 	display: flex;
@@ -563,8 +564,9 @@ main .pendidikan{
 }
 main .pendidikan img{
 	width: 150px;
-	height: 150px;
-
+    height: 150px;
+    margin: 50% auto;
+    display: block;
 }
 main .pendidikan .pendshow{
 	display: flex;
