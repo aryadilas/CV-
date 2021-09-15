@@ -11,8 +11,16 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 	<script src="assets\js\jquery-3.2.1.min.js"></script>
+	
 </head>
+
 <body>
+	<script type="text/javascript">
+		$(window).ready(()=>{
+		    //function(e) {e.preventDefault(); //Autoscroll ke bagian home
+      		$("html, body").animate({ scrollTop: $('#home').offset().top - 100 }, 1000);
+		});
+	</script>
 	<header>
 			<nav>
 				<div id="logo">
@@ -25,8 +33,6 @@
 					<!-- <li><a href="aboutbtn">About</a></li> -->
 					<li><a id="prestasibtn">Prestasi</a></li>
 					<li><a id="pendidikanbtn">Pendidikan</a></li>
-					
-					
 				</ul>
 				<div id="toggle-menu">
 					<input type="checkbox">
@@ -46,7 +52,10 @@
 						<p align="justify">Saya Adalah Seorang Mahasiswa Berusia 21 Tahun yang Sedang menempuh pendidikan S1 di UNIKOM. Hobi Saya Programming, Bermain Musik dan Aktif Mencari Hal Baru Dalam Dunia Teknologi.</p>
 					</div>
 					<div class="profile-img">
-						<img src="assets/images/me.png">
+						
+							<img src="assets/images/meg.png">
+							<!-- <img src="assets/images/meg.png"> -->
+						
 					</div>
 				</div>
 
@@ -196,6 +205,7 @@
 			
 		</footer>
 		<script type="text/javascript">
+			
       		$('a#homebtn').click(function(e) {e.preventDefault(); //Autoscroll ke bagian home
       		$("html, body").animate({ scrollTop: $('#home').offset().top - 100 }, 1000);});
       		/*$('a#aboutbtn').click(function(e) {e.preventDefault(); //Autoscroll ke bagian about
