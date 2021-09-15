@@ -1,7 +1,8 @@
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-    height: 10px;
+    height: 0px;
+    visibility: none;
 }
 
 /* Track */
@@ -24,7 +25,17 @@
   	padding : 0;
   	font-family: 'Poppins', sans-serif;
 }
-@keyframes skill {
+@keyframes skill1 {
+  	from {
+  		height: 0px;
+    	bottom: 0px;
+	}
+  	to {
+  		height: 50px;
+    	bottom: 50px;
+  	}
+}
+@keyframes skill2 {
   	from {
   		height: 0px;
     	bottom: 0px;
@@ -34,9 +45,244 @@
     	bottom: 100px;
   	}
 }
+@keyframes skill3 {
+  	from {
+  		height: 0px;
+    	bottom: 0px;
+	}
+  	to {
+  		height: 150px;
+    	bottom: 150px;
+  	}
+}
+@keyframes skill4 {
+  	from {
+  		height: 0px;
+    	bottom: 0px;
+	}
+  	to {
+  		height: 200px;
+    	bottom: 200px;
+  	}
+}
+@keyframes skill5 {
+  	from {
+  		height: 0px;
+    	bottom: 0px;
+	}
+  	to {
+  		height: 250px;
+    	bottom: 250px;
+  	}
+}
+
+
+
+
+
+
+
+
+
+/*Keyframes*/
+
+@keyframes glitch1 {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  7% {
+    transform: skew(-0.5deg, -0.9deg);
+    opacity: 0.75;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(0.8deg, -0.1deg);
+    opacity: 0.75;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(-2px, -3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(-5px, -2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(-5px, -1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(-2px, -6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+
+@keyframes glitch3 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(2px, 3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(5px, 2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(5px, 1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(2px, 6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.r1{
+	animation: skill1 5s;
+}
+.r2{
+	animation: skill2 5s;
+}
+.r3{
+	animation: skill3 5s;
+}
+.r4{
+	animation: skill4 5s;
+}
+.r5{
+	animation: skill5 5s;
+}
 html, body {
   	background-color: #1d2934;
-  	overflow-x: hidden;
+  	overflow: hidden;
+  	/*overflow-y: none;*/
 }
 
 nav {
@@ -144,10 +390,9 @@ main .home{
 	text-align: center;
 }
 main .home .profile{
-	max-width: 30vw;
+	max-width: 40vw;
     font-size: 15px;
-    padding-top: 15%;
-    margin: 1px auto;
+    margin: auto;
 }
 main .home .profile-img{
 	display: flex;
@@ -155,8 +400,16 @@ main .home .profile-img{
 }
 main .home .profile-img img{
 	max-width: 50vw;
+	/*filter: grayscale(100%);*/
+	position: relative;
+	animation: glitch1 2.5s infinite;
 }
-
+main .home .profile-img img:nth-child(2){
+	animation: glitch2 2.5s infinite;
+	max-width: 50vw;
+	position: absolute;
+	left: 517px;
+}
 main .keahlian{
 	display: flex;
 	justify-content: space-evenly;
@@ -196,8 +449,7 @@ main .keahlian .skill-name .skill-rate span.rate2{
     position: relative;
     height: 100px;
     bottom: 100px;
-    animation-name: skill;
-  	animation-duration: 4s;
+    
 }
 main .keahlian .skill-name .skill-rate span.rate3{
 	background-color: #9c59b6;
@@ -437,6 +689,9 @@ main #contact-cont .socmed{
 
 
 @media screen and (max-width: 576px){
+	body,html {
+		overflow: scroll;
+	}
 	nav {
 		position: fixed;
 	}
@@ -470,7 +725,6 @@ main #contact-cont .socmed{
 	}
 	main .home .profile {
 	    max-width: 85vw;
-	    padding-top: 45%;
 	}
 	main .home .profile-img img{
 		display: none;
